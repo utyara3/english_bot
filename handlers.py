@@ -32,6 +32,13 @@ async def start_cmd(message: Message, state: FSMContext) -> None:
     await send_words(message, state)
 
 
+@router.message(Command('skip'))
+async def skip_cmd(message: Message, state: FSMContext) -> None:
+    logger.info(f"{user.id} {user.username} {user.full_name} skip")
+
+    await send_words(message, state)
+
+
 async def send_words(message: Message, state: FSMContext) -> None:
     rand_pair = get_random_word_pair()
     shuffle(rand_pair)
@@ -69,9 +76,4 @@ async def stop_cmd(message: Message) -> None:
     await message.answer("приостановлено. напиши /start чтобы продолжить...")
 
 
-@router.message(Command('skip'))
-async def skip_cmd(message: Message, state: FSMContext) -> None:
-    logger.info(f"{user.id} {user.username} {user.full_name} skip")
-
-    await send_words(message, state)
 

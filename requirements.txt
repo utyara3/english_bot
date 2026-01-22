@@ -1,4 +1,3 @@
 aiogram
 python-dotenv
-logging
 aiogram-sqlite-storage

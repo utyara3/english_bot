@@ -23,7 +23,7 @@ vocabulary = {
     "committed": "преданный",
     "competitive": "соперничающий",
     "complementary": "дополняющий",
-    "compromise": "идти на компромисс",
+    "compromise": "компромисс",
     "constant": "постоянный",
     "constantly": "постоянно",
     "control": "контроль",

@@ -73,7 +73,7 @@ vocabulary = {
     "pay attention": "обращать внимание",
     "personality trait": "черта личности",
     "predictably": "предсказуемо",
-    "unpredictable": "непредсказуемо",
+    "unpredictable": "непредсказуемый",
     "provoke": "провоцировать",
     "pushiness": "навязчивость",
     "rant and rave": "кричать",

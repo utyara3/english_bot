@@ -14,8 +14,6 @@ class Words(StatesGroup):
     correct_word = State()
 
 
-
-
 logger = get_logger(__name__)
 router = Router()
 
@@ -71,5 +69,9 @@ async def stop_cmd(message: Message) -> None:
     await message.answer("приостановлено. напиши /start чтобы продолжить...")
 
 
+@router.message(Command('skip'))
+async def skip_cmd(message: Message, state: FSMContext) -> None:
+    logger.info(f"{user.id} {user.username} {user.full_name} skip")
 
+    await send_words(message, state)
 

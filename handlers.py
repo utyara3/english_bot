@@ -34,6 +34,7 @@ async def start_cmd(message: Message, state: FSMContext) -> None:
 
 @router.message(Command('skip'))
 async def skip_cmd(message: Message, state: FSMContext) -> None:
+    user = message.from_user
     logger.info(f"{user.id} {user.username} {user.full_name} skip")
 
     await send_words(message, state)
